@@ -1,8 +1,9 @@
 {
-  "name": "Tenzies",
+  "name": "tenzies",
   "dependencies": {
     "nanoid": "^3.2.0",
     "react": "17.0.2",
+    "react-confetti": "^6.0.1",
     "react-dom": "17.0.2"
   },
   "devDependencies": {
