@@ -1,23 +1,16 @@
 {
-  "name": "project",
+  "name": "Tenzies",
   "dependencies": {
     "nanoid": "^3.2.0",
     "react": "17.0.2",
     "react-dom": "17.0.2"
   },
   "devDependencies": {
-    "babel-core": "^6.0",
-    "babel-loader": "^7.0",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-preset-env": "*",
-    "babel-preset-react": "*",
-    "webpack": "^5.67.0",
-    "webpack-cli": "^4.9.2",
-    "webpack-dev-server": "^4.7.3"
+    "esbuild": "^0.14.14"
   },
   "scripts": {
-    "build": "webpack",
-    "watch": "webpack -w",
-    "serve": "webpack serve"
+    "build": "cp index.html style.css build && esbuild --bundle index.jsx --outfile=build/index.js",
+    "serve": "python3 -m http.server --directory build",
+    "watch": "cp index.html style.css build && esbuild --bundle index.jsx --outfile=build/index.js --watch"
   }
 }
