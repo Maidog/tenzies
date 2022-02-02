@@ -10,7 +10,7 @@
     "esbuild": "^0.14.14"
   },
   "scripts": {
-    "build": "cp index.html style.css build && esbuild --bundle index.jsx --outfile=build/index.js",
+    "build": "mkdir -p build && cp index.html style.css build && esbuild --bundle index.jsx --outfile=build/index.js",
     "serve": "python3 -m http.server --directory build",
     "watch": "cp index.html style.css build && esbuild --bundle index.jsx --outfile=build/index.js --watch"
   }
